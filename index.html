@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>企业站</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                '"Microsoft YaHei UI"',
+                'system-ui',
+                '-apple-system',
+                'Segoe UI',
+                'Roboto',
+                'sans-serif',
+              ],
+            },
+            colors: {
+              brand: {
+                orange: '#f97316',
+                dark: '#0f172a',
+              },
+            },
+            keyframes: {
+              'title-fly-in-rtl': {
+                '0%': { transform: 'translateX(10rem)', opacity: '0' },
+                '100%': { transform: 'translateX(0)', opacity: '1' },
+              },
+              'card-overlay-fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+            },
+            animation: {
+              'title-fly-in-rtl': 'title-fly-in-rtl 0.5s ease-out forwards',
+              'card-overlay-fade-in': 'card-overlay-fade-in 0.5s ease-out forwards',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  <body class="m-0">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

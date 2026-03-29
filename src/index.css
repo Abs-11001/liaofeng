@@ -1,0 +1,27 @@
+/* 解决 Tailwind 默认把 img 设为 block 导致 text-align: center 失效的问题 */
+.prose p[style*="text-align: center"] img {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 如果有些图片没被包裹在 p 标签里，而是直接使用的内联居中样式 */
+.prose img[style*="text-align: center"],
+.prose img[style*="margin: 0 auto"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 针对所有页面隐藏滚动条，但保留滚动功能 */
+html, body {
+    /* 针对 Firefox */
+    scrollbar-width: none;
+
+    /* 针对 IE 和 Edge */
+    -ms-overflow-style: none;
+}
+
+/* 针对 Chrome, Safari, 和 Opera (Webkit内核) */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+}
